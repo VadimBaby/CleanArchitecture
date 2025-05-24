@@ -5,6 +5,8 @@ import Foundation
 public final class BaseNetworkService: Network {
     private var baseURL: String?
     
+    public init() {}
+    
     public func execute(
         path: String,
         method: RequestMethod = .get,

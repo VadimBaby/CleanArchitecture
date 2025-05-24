@@ -7,13 +7,22 @@
 
 import SwiftUI
 import Network
+import Swinject
 
 @main
 struct CleanArchitectureApp: App {
+    let resolver: Resolver
+    
+    init() {
+        self.resolver = DIConfigurator.configure(
+            with: [NetworkAssembly(), RepositoriesAssembly(), DomainAssembly()]
+        )
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                HomeView(useCase: HomeAssembly.useCase())
+                HomeView(viewModel: HomeAssembly.viewModel(resolver: resolver), resolver: resolver)
             }
         }
     }

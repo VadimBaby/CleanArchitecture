@@ -7,12 +7,16 @@
 
 import SwiftUI
 import UIKitLibrary
+import Swinject
 
 struct HomeView: View {
     @StateObject private var viewModel: HomeViewModel
     
-    init(useCase: CharacterUseCase) {
-        self._viewModel = StateObject(wrappedValue: HomeViewModel(useCase: useCase))
+    private let resolver: Resolver
+    
+    init(viewModel: HomeViewModel, resolver: Resolver) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        self.resolver = resolver
     }
     
     
@@ -66,6 +70,6 @@ private extension HomeView {
 
 #Preview {
     NavigationStack {
-        HomeView(useCase: HomeAssembly.useCase())
+        HomeView(viewModel: HomeAssembly.mockViewModel(), resolver: Container())
     }
 }

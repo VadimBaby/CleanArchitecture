@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C9B278A2DE1A2A9004D0669 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9B27892DE1A2A9004D0669 /* Swinject */; };
+		2C9B278E2DE1A3CF004D0669 /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B278D2DE1A3CF004D0669 /* NetworkAssembly.swift */; };
+		2C9B27912DE1A471004D0669 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B27902DE1A471004D0669 /* RepositoriesAssembly.swift */; };
+		2C9B27932DE1A4BA004D0669 /* DomainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B27922DE1A4BA004D0669 /* DomainAssembly.swift */; };
+		2C9B27962DE1A51F004D0669 /* DIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B27952DE1A51F004D0669 /* DIConfigurator.swift */; };
 		2CDB3A4F2DD72E2400D57FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB3A492DD72E2400D57FA4 /* Preview Assets.xcassets */; };
 		2CDB3A502DD72E2400D57FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB3A4B2DD72E2400D57FA4 /* Assets.xcassets */; };
 		2CDB3A512DD72E2400D57FA4 /* CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB3A4C2DD72E2400D57FA4 /* CleanArchitectureApp.swift */; };
@@ -29,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C9B278D2DE1A3CF004D0669 /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
+		2C9B27902DE1A471004D0669 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		2C9B27922DE1A4BA004D0669 /* DomainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAssembly.swift; sourceTree = "<group>"; };
+		2C9B27952DE1A51F004D0669 /* DIConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIConfigurator.swift; sourceTree = "<group>"; };
 		2CDB3A382DD72E1100D57FA4 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDB3A492DD72E2400D57FA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CDB3A4B2DD72E2400D57FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,12 +67,40 @@
 			files = (
 				2CDB3ABE2DD755E000D57FA4 /* Network in Frameworks */,
 				2CDB3AE42DD7864D00D57FA4 /* UIKitLibrary in Frameworks */,
+				2C9B278A2DE1A2A9004D0669 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C9B278B2DE1A3AB004D0669 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B27942DE1A512004D0669 /* Configurator */,
+				2C9B278C2DE1A3BF004D0669 /* Assemblies */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		2C9B278C2DE1A3BF004D0669 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B278D2DE1A3CF004D0669 /* NetworkAssembly.swift */,
+				2C9B27902DE1A471004D0669 /* RepositoriesAssembly.swift */,
+				2C9B27922DE1A4BA004D0669 /* DomainAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		2C9B27942DE1A512004D0669 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B27952DE1A51F004D0669 /* DIConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		2CDB3A2F2DD72E1100D57FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +162,7 @@
 		2CDB3AB42DD73BB800D57FA4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2C9B278B2DE1A3AB004D0669 /* DI */,
 				2CDB3AB72DD73BD000D57FA4 /* Features */,
 				2CDB3AB62DD73BC700D57FA4 /* App */,
 				2CDB3AB52DD73BC300D57FA4 /* Resources */,
@@ -277,6 +315,7 @@
 			packageProductDependencies = (
 				2CDB3ABD2DD755E000D57FA4 /* Network */,
 				2CDB3AE32DD7864D00D57FA4 /* UIKitLibrary */,
+				2C9B27892DE1A2A9004D0669 /* Swinject */,
 			);
 			productName = CleanArchitecture;
 			productReference = 2CDB3A382DD72E1100D57FA4 /* CleanArchitecture.app */;
@@ -307,6 +346,9 @@
 			);
 			mainGroup = 2CDB3A2F2DD72E1100D57FA4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2C9B27882DE1A2A9004D0669 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 2CDB3A392DD72E1100D57FA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CDB3ACB2DD7586E00D57FA4 /* CharacterNetworkStorage.swift in Sources */,
+				2C9B27932DE1A4BA004D0669 /* DomainAssembly.swift in Sources */,
 				2CDB3AD62DD75B8900D57FA4 /* ResponseMapper.swift in Sources */,
 				2CDB3ADD2DD779BC00D57FA4 /* HomeView.swift in Sources */,
 				2CDB3AC32DD7562200D57FA4 /* ResponseModel.swift in Sources */,
@@ -341,11 +384,14 @@
 				2CDB3ACE2DD7591A00D57FA4 /* CharacterMapper.swift in Sources */,
 				2CDB3AE12DD77D6C00D57FA4 /* HomeAssembly.swift in Sources */,
 				2CDB3AC52DD756B900D57FA4 /* CharacterModel.swift in Sources */,
+				2C9B27962DE1A51F004D0669 /* DIConfigurator.swift in Sources */,
 				2CDB3ABB2DD755C400D57FA4 /* CharacterService.swift in Sources */,
 				2CDB3ADF2DD77A6D00D57FA4 /* HomeViewModel.swift in Sources */,
+				2C9B278E2DE1A3CF004D0669 /* NetworkAssembly.swift in Sources */,
 				2CDB3A512DD72E2400D57FA4 /* CleanArchitectureApp.swift in Sources */,
 				2CDB3AE72DD798A700D57FA4 /* Status.swift in Sources */,
 				2CDB3AD22DD7598B00D57FA4 /* Optional.swift in Sources */,
+				2C9B27912DE1A471004D0669 /* RepositoriesAssembly.swift in Sources */,
 				2CDB3AD42DD75A8F00D57FA4 /* InfoMapper.swift in Sources */,
 				2CDB3AC82DD7579D00D57FA4 /* CharacterRepository.swift in Sources */,
 			);
@@ -556,7 +602,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2C9B27882DE1A2A9004D0669 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		2C9B27892DE1A2A9004D0669 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C9B27882DE1A2A9004D0669 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		2CDB3ABD2DD755E000D57FA4 /* Network */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Network;

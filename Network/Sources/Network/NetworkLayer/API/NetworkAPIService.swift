@@ -36,7 +36,7 @@ public final class NetworkAPIService: NetworkAPI {
         }
     }
     
-    init(network: Network) {
+    public init(network: Network) {
         self.network = network
         self.network.configure(with: Constants.baseURL)
     }
